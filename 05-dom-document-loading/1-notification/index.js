@@ -15,7 +15,6 @@ export default class NotificationMessage {
     this.duration = duration;
     this.type = type;
     this.durationInSecond = (duration / 1000) + 's';
-    console.log(this.durationInSecond)
     this.render();
 
   }
@@ -61,7 +60,7 @@ export default class NotificationMessage {
   }
   destroy() {
     this.remove();
-    this.element = {};
-    NotificationMessage.activeNotification = {};
+    this.element = null;
+    NotificationMessage.activeNotification = null;
   }
 }
